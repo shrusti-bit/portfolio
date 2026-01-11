@@ -1,44 +1,32 @@
-# Portfolio for Content Marketing Working Student Position at Weflow
+# Content Marketing Portfolio - Shrusti Santhosh
 
-This portfolio has been created to support your application for the Content Marketing Working Student role at Weflow.
+## 🌐 View Online
+**Live Portfolio:** [https://shrusti-bit.github.io/portfolio/](https://shrusti-bit.github.io/portfolio/)
 
-## Files
+Simply click the link above to view the portfolio in your browser!
 
-- `portfolio.html` - Main portfolio file (view in browser or export to PDF)
+## 📄 About This Portfolio
+This portfolio showcases my work in content marketing, social media design, and visual storytelling for NGOs including HOPE Anti-Addiction Action Group, Project Shelter, and Project Vision.
 
-## How to Use
+## 🛠️ How to View Locally
+If you prefer to view the portfolio locally:
+1. Click on `portfolio.html` in this repository
+2. Click the "Raw" button (top right)
+3. Copy the URL
+4. Paste it in your browser address bar
+5. Or download the file and open it directly in any web browser
 
-1. **View the Portfolio:**
-   - Open `portfolio.html` in any web browser
-   - Use Ctrl+P (Cmd+P on Mac) to print/save as PDF
-   - Choose "Save as PDF" as the destination
+## 📧 Contact
+- **Email:** shrustisanthosh05@gmail.com
+- **LinkedIn:** [linkedin.com/in/shrusti-s-3251bb257](https://linkedin.com/in/shrusti-s-3251bb257)
+- **Phone:** +49 171 7440587
 
-2. **Add Your Images:**
-   - Replace the image placeholders in the HTML with your actual screenshots
-   - For Facebook/Instagram posts: Take screenshots and save them
-   - For videos: Use still frames or create QR codes linking to video
-   - Update the `<div class="image-placeholder">` sections with `<img>` tags pointing to your images
+## 🎨 Projects Featured
+- HOPE Anti-Addiction Action Group
+- Project Shelter
+- Project Vision
 
-3. **Customize:**
-   - Add your portrait photo in the "About Me" section
-   - Replace all placeholder text with actual images
-   - Adjust colors/styling in the `<style>` section if needed
+---
 
-## Tips
+*Last updated: January 2026*
 
-- Keep the layout clean and consistent (same font, spacing, colors)
-- Export as PDF for easy sharing via email
-- You can also share via Canva link if you prefer to create it there
-- Make sure all images are high quality and properly formatted
-
-## Job Application Details
-
-**Position:** Working Student - Content Marketing (m/f/d - Remote/Germany)  
-**Company:** Weflow  
-**Application Includes:**
-- Cover letter (Page 1)
-- About Me (Page 2)
-- Project showcase (Pages 3-5)
-- Tools & Contact (Page 6)
-
-Good luck with your application!
