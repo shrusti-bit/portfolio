@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrusti Santhosh - Content Marketing Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Impact&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2d2927;
+            background: #eff0f1;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: #eff0f1;
+            margin: 20px auto;
+            padding: 40px 50px;
+            box-shadow: 0 0 15px rgba(142, 56, 61, 0.2);
+            page-break-after: always;
+        }
+
+        .page:last-child {
+            page-break-after: auto;
+        }
+
+        h1 {
+            color: #8e383d;
+            font-family: 'Impact', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #c3444d;
+            padding-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            color: #8e383d;
+            font-family: 'Impact', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+        }
+
+        h3 {
+            color: #c3444d;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .cover-letter {
+            line-height: 1.8;
+        }
+
+        .cover-letter p {
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            margin-top: 30px;
+        }
+
+        .about-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .portrait-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #e8e8e8;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-header {
+            background: #d99f89;
+            padding: 15px;
+            border-left: 4px solid #c3444d;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .project-header h3 {
+            margin: 0 0 10px 0;
+            color: #2d2927;
+            font-weight: 700;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            background: #eff0f1;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #d99f89;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #8e383d;
+            font-size: 14px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #e8e8e8;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .image-grid img, .image-grid-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #c3444d;
+            box-shadow: 0 4px 8px rgba(142, 56, 61, 0.2);
+        }
+
+        .image-grid-large {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .image-grid-large .image-placeholder,
+        .image-grid-large img {
+            aspect-ratio: 4/3;
+        }
+
+        .tools-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .tools-list, .skills-list {
+            background: #eff0f1;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d99f89;
+        }
+
+        .tools-list ul, .skills-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tools-list li, .skills-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #d99f89;
+        }
+
+        .tools-list li:last-child, .skills-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-info {
+            background: #8e383d;
+            color: #eff0f1;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(142, 56, 61, 0.3);
+        }
+
+        .contact-info h3 {
+            color: #eff0f1;
+            margin-bottom: 20px;
+            font-family: 'Impact', sans-serif;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item strong {
+            min-width: 80px;
+        }
+
+        .closing-note {
+            background: #d99f89;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #c3444d;
+            margin-top: 30px;
+            text-align: center;
+            font-style: italic;
+            color: #2d2927;
+            font-weight: 500;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 50px;
+            color: #8e383d;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .quick-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .quick-post {
+            aspect-ratio: 1;
+            background: #eff0f1;
+            border: 2px dashed #d99f89;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8e383d;
+            border-radius: 8px;
+            font-size: 11px;
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .quick-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Cover Letter -->
+    <div class="page">
+        <h1>Cover Letter</h1>
+        <div class="cover-letter">
+            <p><strong>Content Marketing Working Student (Weflow)</strong></p>
+            <br>
+            <p>Dear Weflow Hiring Team,</p>
+            <p>I am excited to apply for the Content Marketing Working Student role at Weflow. I'm currently pursuing my Master's in Data and Knowledge Engineering at Otto-von-Guericke University, Magdeburg. I am passionate about combining creative content with strategic communication.</p>
+            <p>For the last few years, I've done a variety of social media content, event visuals, campaign material, proposals, reports, and videos for university and NGOs in India like the HOPE Anti‑Addiction Action Group, Project Shelter, and Project Vision, not as a job but out of sheer passion. From creating quick Canva designs for urgent events to producing visual carousels, comprehensive proposals, reports, and video content for Facebook and Instagram, I've learned how to communicate meaningful messages with clarity and visual appeal. This has taught me to work independently, manage tight deadlines, and stay organized while handling multiple content creation needs.</p>
+            <p>I was thrilled to see this job to be able to take this passion of mine further and create content that is ready for LinkedIn, newsletters, one pagers, and guides that build trust with modern revenue teams. I am eager to learn how to shape content strategy, manage editorial calendars, and execute end‑to‑end content creation in a B2B SaaS setting.</p>
+            <p>I can start immediately as a working student, where I can devote at least 15-20 hours in a week. I would be excited to add my design capabilities, creativity and eagerness to the marketing team Weflow.</p>
+            <div class="signature">
+                <p>Best regards,</p>
+                <p><strong>Shrusti Santhosh</strong></p>
+            </div>
+        </div>
+        <div class="page-number">Page 1</div>
+    </div>
+
+    <!-- Page 2: About Me -->
+    <div class="page">
+        <h1>About Me</h1>
+        <div class="about-section">
+            <div class="about-text">
+                <h2>Hi, I'm Shrusti!</h2>
+                <p>I am a Master's student in Data & Knowledge Engineering at Otto-von-Guericke University. I have a strong passion for creating social media content, event materials, proposals, reports, videos, and visual storytelling—mostly for NGOs and community initiatives like Project Shelter and Project Vision.</p>
+                <h3>Tools I use:</h3>
+                <p>Canva, basic video editing tools, Instagram/Facebook post templates</p>
+                <h3>Style:</h3>
+                <p>Clean, engaging, audience-focused visuals that communicate purpose quickly</p>
+            </div>
+            <div class="about-image">
+                <div class="portrait-placeholder">
+                    [Portrait Photo<br>or Illustration]
+                </div>
+            </div>
+        </div>
+        <div class="page-number">Page 2</div>
+    </div>
+
+    <!-- Page 3: HOPE Anti-Addiction Action Group (including Project Shelter & Project Vision) -->
+    <div class="page">
+        <h1>HOPE Anti-Addiction Action Group</h1>
+        <div class="project-section">
+            <div class="project-header">
+                <h3>Objective</h3>
+                <p>Support addiction prevention, community housing initiatives (Project Shelter), eye care programs (Project Vision), and various community events through comprehensive content creation.</p>
+            </div>
+            <div class="project-details">
+                <div class="detail-item">
+                    <div class="detail-label">My Role:</div>
+                    <div>Social media content creator, event visual designer, video creator, proposal and report designer for HOPE, Project Shelter, and Project Vision</div>
+                </div>
+            </div>
+            <h3>Projects Under HOPE:</h3>
+            <ul>
+                <li><strong>HOPE Anti-Addiction Action Group:</strong> Mental health awareness, addiction prevention campaigns, community engagement</li>
+                <li><strong>Project Shelter:</strong> Community housing initiatives, volunteer events, donor engagement</li>
+                <li><strong>Project Vision:</strong> Eye care programs and community outreach</li>
+            </ul>
+            <h3>Examples of Work:</h3>
+            <ul>
+                <li>Facebook and Instagram posts for mental health awareness, housing initiatives, and community events</li>
+                <li>Event invitations for home inaugurations and community gatherings</li>
+                <li>Video content highlighting volunteer stories and project milestones</li>
+                <li>Proposals, reports, and campaign materials</li>
+                <li>Quick turnaround graphics for urgent events</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>View my work:</strong><br>
+            <a href="https://www.facebook.com/projectshelter" target="_blank" style="color: #c3444d; text-decoration: none; font-weight: 600;">Project Shelter - Facebook</a> | 
+            <a href="https://www.instagram.com/projectshelter2023/" target="_blank" style="color: #c3444d; text-decoration: none; font-weight: 600;">Project Shelter - Instagram</a> | 
+            <a href="https://projectshelter.org.in/" target="_blank" style="color: #c3444d; text-decoration: none; font-weight: 600;">Project Shelter - Website</a> | 
+            <a href="https://www.facebook.com/theprojectvision" target="_blank" style="color: #c3444d; text-decoration: none; font-weight: 600;">Project Vision - Facebook</a></p>
+            <h3 style="margin-top: 30px;">Portfolio of Work:</h3>
+            <div class="image-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <img src="images/469522772_122212652828063907_5590145397442497896_n (1).jpg" alt="Facebook Post - Mental Health Awareness">
+                <img src="images/469636259_122212837610063907_7384679313775834287_n.jpg" alt="Instagram Carousel - Community Engagement">
+                <img src="images/469777456_122212837358063907_3181250783207948289_n.jpg" alt="Campaign Graphic - Urgent Event">
+                <img src="images/469858026_122212837016063907_4850534874201425070_n.jpg" alt="Event Invitation - Home Inauguration">
+                <img src="images/469886278_122213165990063907_4947561561530352096_n.jpg" alt="Social Media Post - Donor Engagement">
+                <img src="images/480153764_122224503254063907_7346874907161561150_n.jpg" alt="Video Snippet - Volunteer Stories">
+                <img src="images/480733253_122225496830063907_2823130041656701882_n.jpg" alt="Awareness Flash Post">
+                <img src="images/481235079_122227887896063907_102702830069164452_n.jpg" alt="Community Outreach">
+                <img src="images/481771899_122227119488063907_6274745145318027897_n.jpg" alt="Event Announcement">
+                <img src="images/482255231_122227119626063907_6128029474551800761_n.jpg" alt="Volunteer Recruitment">
+                <img src="images/486690890_122233553432063907_8105452734034851939_n.jpg" alt="Campaign Poster">
+                <img src="images/1757969383545.jpg" alt="HOPE Project Work">
+            </div>
+            <p><strong>Description:</strong> Created comprehensive content for HOPE and its initiatives including Project Shelter and Project Vision. Designed social media posts, event materials, videos, proposals, and reports that communicate important messages with clarity and visual appeal. Managed multiple projects simultaneously, working efficiently under tight deadlines while maintaining high-quality designs that motivate community participation and engagement.</p>
+        </div>
+        <div class="page-number">Page 3</div>
+    </div>
+
+    <!-- Page 6: Tools & Contact -->
+    <div class="page">
+        <h1>Tools & Contact</h1>
+        <div class="tools-section">
+            <div class="tools-list">
+                <h3>Design Tools</h3>
+                <ul>
+                    <li>Canva</li>
+                    <li>Adobe Premiere Pro</li>
+                </ul>
+                <h3 style="margin-top: 30px;">Social Media Platforms</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+            <div class="skills-list">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Visual storytelling</li>
+                    <li>Content planning</li>
+                    <li>Audience engagement</li>
+                    <li>Quick turnaround design</li>
+                    <li>Proposal & report writing</li>
+                    <li>Video creation & editing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <span>shrustisanthosh05@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong>
+                <span><a href="https://linkedin.com/in/shrusti-s-3251bb257" target="_blank" style="color: #d99f89; text-decoration: underline; font-weight: 600;">linkedin.com/in/shrusti-s-3251bb257</a></span>
+            </div>
+            <div class="contact-item">
+                <strong>Phone:</strong>
+                <span>+49 171 7440587</span>
+            </div>
+        </div>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #e0e0e0;">
+            <h3 style="color: #8e383d; margin-bottom: 15px; margin-top: 0; font-family: 'Impact', sans-serif;">Projects & Links</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div>
+                    <strong style="color: #8e383d; font-weight: 700;">Project Shelter:</strong><br>
+                    <a href="https://www.facebook.com/projectshelter" target="_blank" style="color: #c3444d; text-decoration: none; font-size: 14px; font-weight: 600;">Facebook</a> | 
+                    <a href="https://www.instagram.com/projectshelter2023/" target="_blank" style="color: #c3444d; text-decoration: none; font-size: 14px; font-weight: 600;">Instagram</a><br>
+                    <a href="https://projectshelter.org.in/" target="_blank" style="color: #c3444d; text-decoration: none; font-size: 14px; font-weight: 600;">Website</a>
+                </div>
+                <div>
+                    <strong style="color: #8e383d; font-weight: 700;">Project Vision:</strong><br>
+                    <a href="https://www.facebook.com/theprojectvision" target="_blank" style="color: #c3444d; text-decoration: none; font-size: 14px; font-weight: 600;">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="closing-note">
+            I'm passionate about turning ideas into engaging visuals and would love to bring my skills and creativity to your team.
+        </div>
+        <div class="page-number">Page 4</div>
+    </div>
+</body>
+</html>
